@@ -6,6 +6,8 @@ desempenho e funcionalidade.
 Integrantes:
     Davi Paiva Sendin - 12421BCC004
     Wilson Ribeiro de Andrade Filho - 12311ECP006
+    Renato Solva Araújo Rosário - 12421BCC073
+    Angelo Ceribelli Piotto - 12421BCC069
     
 Ideia e formulação para implementação:
 
