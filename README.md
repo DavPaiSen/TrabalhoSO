@@ -39,6 +39,8 @@ esses testes ao mesmo tempo, altera a fatia de tempo do sistema e usa o seu
 getturnaround() para imprimir um relatório final mostrando qual foi o tempo de 
 atraso de cada um.
 
+Link para o vídeo: https://www.youtube.com/watch?v=7VQ_ROaeCf0
+
 
 
 
