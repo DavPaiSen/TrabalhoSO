@@ -8,7 +8,7 @@
 
 
 //mudar o quantum aqui!
-#define quantum 5 
+#define QUANTUM 5 
 
 struct spinlock tickslock;
 uint ticks;
@@ -91,7 +91,7 @@ usertrap(void)
     if (p && p->state == RUNNING) {//verificando se o processo existe e esta rodando
       p->tempo_quantum++;
 
-      if (p->tempo_quantum >= quantum) { //autoexplicativo
+      if (p->tempo_quantum >= QUANTUM) { //autoexplicativo
         p->tempo_quantum = 0;
         yield();
       }
