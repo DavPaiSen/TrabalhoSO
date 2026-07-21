@@ -149,6 +149,7 @@ found:
   //coloca o tempo de criacao do processo
   p->criacao = ticks;
   p->final = 0;
+  p->tempo_quantum = 0;
 
   return p;
 }

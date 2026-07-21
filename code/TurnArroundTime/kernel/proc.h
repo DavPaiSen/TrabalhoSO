@@ -105,4 +105,6 @@ struct proc {
   //adicionei o tempo de criacao e de fim
   uint64 criacao;
   uint64 final;
+
+  uint64 tempo_quantum;
 };
