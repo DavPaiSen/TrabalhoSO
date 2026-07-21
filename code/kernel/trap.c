@@ -96,7 +96,6 @@ usertrap(void)
         yield();
       }
     }
-    yield();
   }
 
   prepare_return();
