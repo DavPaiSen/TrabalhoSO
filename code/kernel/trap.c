@@ -185,11 +185,6 @@ clockintr()
     wakeup(&ticks);
     release(&tickslock);
   }
-
-  // ask for the next timer interrupt. this also clears
-  // the interrupt request. 1000000 is about a tenth
-  // of a second.
-  w_stimecmp(r_time() + 1000000);
 }
 
 // check if it's an external interrupt or software interrupt,
@@ -223,9 +218,10 @@ devintr()
       plic_complete(irq);
 
     return 1;
-  } else if (scause == 0x8000000000000005L) {
-    // timer interrupt.
+  } else if (scause == 0x8000000000000001L) {
+    // software interrupt from machine-mode timer interrupt.
     clockintr();
+    w_sip(r_sip() & ~2);
     return 2;
   } else {
     return 0;

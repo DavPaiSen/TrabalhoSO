@@ -111,8 +111,7 @@ sys_uptime(void)
 
 //retorna quantos ticks o processo existiu
 uint sys_tatime(void) {
-  
   struct proc *p = myproc();
-
-  return p->final - p->criacao;
+  uint64 end_time = (p->final != 0) ? p->final : ticks;
+  return end_time - p->criacao;
 }
